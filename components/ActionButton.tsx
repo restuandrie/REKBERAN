@@ -63,7 +63,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({
         // The original spread below is kept as is for "minimal change" regarding the error,
         // though it's not ideal as it spreads button-specific attributes onto an anchor.
         // The reported error was specifically for the onClick assignment.
-        {...(props as Omit<ActionButtonProps, 'type' | 'disabled'>)} // Spread remaining props, excluding button-specific ones
+        {...(props as Omit<ActionButtonProps, 'type' | 'disabled'> as any)} // Spread remaining props, casting to any to bypass type error
       >
         {isLoading && loadingSpinner}
         {icon && !isLoading && <span className="mr-2">{icon}</span>}

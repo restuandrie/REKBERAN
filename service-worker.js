@@ -1,11 +1,11 @@
 
-const CACHE_NAME = 'rekberan-cache-v2'; // Incremented cache version
+const CACHE_NAME = 'rekberan-cache-v3'; // Incremented cache version
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
+  '/public/icons/icon-192x192.png', // Updated path
+  '/public/icons/icon-512x512.png', // Updated path
   // Tailwind CSS is handled differently below for no-cors
 ];
 
